@@ -3,6 +3,7 @@ import Todo from './Todo'
 import Progress from './Progress'
 import Done from './Done'
 
+
 export default function Interface(props) {
 
     const [value, setValue] = useState('')
@@ -18,7 +19,7 @@ export default function Interface(props) {
    return (
    <div className='interface'>
        <Todo userInput={ <input type="text" value={value} onChange={handleChange} />} 
-       todos={todos.map(todo=> <h1>{todo}</h1>)} addTodo = {<button onClick={()=>{
+       todos={todos} addTodo = {<button onClick={()=>{
            
         setTodos([...todos, value])
         
