@@ -1,14 +1,14 @@
 import React, { useState } from 'react' 
 import Todo from './Todo'
-import Progress from './Progress'
-import Done from './Done'
+// import Progress from './Progress'
+// import Done from './Done'
 
 
 export default function Interface(props) {
 
     const [value, setValue] = useState('')
 
-    const [todos, setTodos] = useState([1, 2, 3, 4, 5])
+    const [todos, setTodos] = useState([])
 
     
 
@@ -22,11 +22,11 @@ export default function Interface(props) {
        todos={todos} addTodo = {<button onClick={()=>{
            
         setTodos([...todos, value])
+        setValue('')
         
-    }}>Add todo</button>} 
+    }}>Add Todo</button>} 
        value = {value}/>
-       <Progress />
-       <Done />
+       
    </div>
    )
 }
